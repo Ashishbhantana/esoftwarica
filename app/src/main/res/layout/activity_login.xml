@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".loginActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="280dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="84dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/softwarica1" />
+            <EditText
+                android:id="@+id/edusername"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:inputType="textPersonName"
+                android:hint="UserName"
+                android:layout_gravity="center" />
+            <EditText
+                android:id="@+id/edpassword"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:inputType="textWebPassword"
+                android:hint="Password"
+                android:layout_gravity="center" />
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Login"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
