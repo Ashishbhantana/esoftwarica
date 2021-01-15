@@ -60,7 +60,7 @@ class NavigationBarActivity : AppCompatActivity() {
         loadStudent()
     }
     private fun loadStudent() {
-        lstStudent.add(student(0, "Ashish Bhantana", "Kathmandu", "22", "Male"))
+        lstStudent.add(student(0, "Ashish Bhantana", "Kathmandu", "22", "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg","Male"))
     }
 }
 

@@ -7,5 +7,6 @@ data class student (
     val sname: String? = null,
     val saddress: String? = null,
     val sage: String? = null,
+    val Image:String?=null,
     val sgender: String? = null
 ):Serializable

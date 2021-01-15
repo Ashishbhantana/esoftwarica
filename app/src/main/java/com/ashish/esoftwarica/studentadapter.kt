@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class studentadapter (
     val lststudent: ArrayList<student>,
@@ -44,6 +45,8 @@ class studentadapter (
         holder.textViewaddress.text=student.saddress
         holder.textViewgender.text=student.sgender
         holder.textViewage.text=student.sage
+
+        Glide.with(context).load(student.Image).into(holder.imgdp)
 
         holder.del.setOnClickListener {
             lststudent.removeAt(position)

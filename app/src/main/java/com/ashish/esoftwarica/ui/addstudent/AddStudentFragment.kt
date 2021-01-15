@@ -16,6 +16,7 @@ class AddStudentFragment : Fragment() {
     private lateinit var uname: EditText
     private lateinit var uaddress: EditText
     private lateinit var uage: EditText
+    private lateinit var imageurl:EditText
     private lateinit var rbmale: RadioButton
     private lateinit var rbfemale: RadioButton
     private lateinit var btnsubmit: Button
@@ -33,6 +34,7 @@ class AddStudentFragment : Fragment() {
         uname = view.findViewById(R.id.uname)
         uaddress = view.findViewById(R.id.uaddress)
         uage = view.findViewById(R.id.uage)
+        imageurl=view.findViewById(R.id.imageurl)
         rbmale = view.findViewById(R.id.rbmale)
         rbfemale = view.findViewById(R.id.rbfemale)
         btnsubmit = view.findViewById(R.id.btnsubmit)
@@ -45,7 +47,7 @@ class AddStudentFragment : Fragment() {
         btnsubmit.setOnClickListener {
             if (!uname.text.isNullOrEmpty() && !uage.text.isNullOrEmpty()){
                 (activity as NavigationBarActivity).lstStudent.add(
-                    student(0,uname.text.toString(),uaddress.text.toString(),uage.text.toString(),gender)
+                    student(0,uname.text.toString(),uaddress.text.toString(),uage.text.toString(),imageurl.text.toString(),gender)
                 )
                 Toast.makeText(context,"Student added succesfully",Toast.LENGTH_SHORT).show()
                 clearfields()
@@ -58,5 +60,7 @@ class AddStudentFragment : Fragment() {
         uname.text=null
         uaddress.text=null
         uage.text=null
+        imageurl.text=null
+
     }
 }
